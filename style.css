@@ -25,11 +25,10 @@ html, body {
 }
 .carousel-caption {
   position: absolute;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
 }
 .carousel-caption h1 {
-  font-size: 500%;
   text-transform: uppercase;
   text-shadow: 1px 1px 15px #000;
 }
@@ -57,10 +56,16 @@ html, body {
   margin-top: .3rem;
   margin-bottom: 1rem;
 }
-.images {
+.zoom {
+  transition: transform .2s;
   width: 100px;
   height: 100px;
-  margin: 1rem;
+  margin: 1.5rem;
+}
+.zoom:hover {
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
 }
 .photo img {
   height: 80%;
