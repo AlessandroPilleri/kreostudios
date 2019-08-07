@@ -6,7 +6,7 @@
 
     <!-- external CSS -->
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -25,7 +25,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="img/ibiscus.png"></a>
+        <a class="navbar-brand" href="#slides"><img src="./img/ibiscus.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,8 +37,15 @@
             <li class="nav-item">
               <a class="nav-link" href="#azienda">Azienda</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Galleria</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Galleria</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a href="./visualmerchandising.html" class="dropdown-item">Visual merchandising</a>
+                <a href="./allestimentovetrine.html" class="dropdown-item">Allestimento vetrine</a>
+                <a href="./eventi.html" class="dropdown-item">Eventi</a>
+                <a href="./grafica.html" class="dropdown-item">Grafica</a>
+                <a href="./restylinginterni.html" class="dropdown-item">Restyling interni</a>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#bio">Biografia</a>
@@ -60,21 +67,21 @@
       </ul>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="img/122.jpg">
+          <img src="./img/122.jpg">
           <div class="carousel-caption">
             <h1 class="display-3">Kreo Studio's</h1>
             <h3>Visual merchandising</h3>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="img/2.jpg">
+          <img src="./img/2.jpg">
           <div class="carousel-caption">
             <h1 class="display-4">Visita la galleria</h1>
             <h3>Potrai trovare esempi reali del nostro lavoro</h3>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="img/3.jpg">
+          <img src="./img/3.jpg">
           <div class="carousel-caption">
             <h1 class="display-4">Sono Patrizia Marras</h1>
             <h3>leggi la mia biografia</h3>
@@ -87,7 +94,7 @@
     <div id="info" class="container-fuild">
       <div class="row jumbotron">
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
-          <p class="lead">Informazioni varie</p>
+          <p class="lead"></p>
         </div>
       </div>
     </div>
@@ -105,20 +112,43 @@
       </div>
     </div>
 
-    <!-- Three Column Section -->
+    <!-- Five Column Section -->
     <div class="container-fluid padding">
       <div class="row text-center padding">
         <div class="col-xs-12 col-sm-6 col-md-4">
-          <img class="zoom" src="img/vetrina.png" alt="">
-          <h3>vetrine</h3>
+          <a href="./visualmerchandising.html">
+            <img class="zoom" src="./img/visualmerchandising.png" alt="" >
+          </a>
+          <h3>Visual merchandising</h3>
+          <p>allestimento interno Corner per ottimizzare la vendita (outfit/colore)</p>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4">
-          <img class="zoom" src="img/allestimenti.png" alt="">
-          <h3>allestimenti</h3>
+          <a href="./allestimentovetrine.html">
+            <img class="zoom" src="./img/vetrina.png" alt="" >
+          </a>
+          <h3>Allestimento vetrine</h3>
+          <p>tematica stagionale/promozionale ed eventi</p>
         </div>
-        <div class="col-sm-12 col-md-4">
-          <img class="zoom" src="img/soggetti2.png" alt="">
-          <h3>soggetti personalizzati</h3>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <a href="./eventi.html">
+            <img class="zoom" src="./img/eventi.png" alt="" >
+          </a>
+          <h3>Eventi</h3>
+          <p>aziendali, promozionali e privati (cerimonie, addobbi natalizi, ...)</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <a href="./grafica.html">
+            <img class="zoom" src="./img/grafica.png" alt="" >
+          </a>
+          <h3>Grafica</h3>
+          <p>pubblicitaria, sfondi fotografici ad alta risoluzione, stampe personalizzate su ogni tipo di materiale (forex, carta da manifesto, pvc, tela, cartone)</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6">
+          <a href="./restylinginterni.html">
+            <img class="zoom" src="./img/restyling.png" alt="" >
+          </a>
+          <h3>Restyling interni</h3>
+          <p>proposte e realizzazione di restyling interni di aziende e privati</p>
         </div>
       </div>
       <hr class="my-4">
@@ -136,7 +166,7 @@ Patrizia Marras</p>
           <p>-Titolare dal 2004 di Kreo Studios ( Visual merchandising , vetrinistica , addobbi per eventi , grafica pubblicitaria )</p>
         </div>
         <div class="col-lg-6 photo">
-          <img src="img/patty.png" alt="photo" class="img-fluid">
+          <img src="./img/patty.png" alt="photo" class="img-fluid">
         </div>
       </div>
       <hr class="my-4">
@@ -149,8 +179,8 @@ Patrizia Marras</p>
           <h2>Connect</h2>
         </div>
         <div class="col-12 social padding">
-          <a href="https://www.facebook.com/marras.patrizia"><img src="img/facebook.png" alt="facebook"></a>
-          <a href="https://www.instagram.com/patty_marras"><img src="img/instagram.png" alt="instagram"></a>
+          <a href="https://www.facebook.com/marras.patrizia"><img src="./img/facebook.png" alt="facebook"></a>
+          <a href="https://www.instagram.com/patty_marras"><img src="./img/instagram.png" alt="instagram"></a>
         </div>
       </div>
     </div>
@@ -162,7 +192,7 @@ Patrizia Marras</p>
           <div class="col-md-4">
           </div>
           <div class="col-md-4">
-            <img class="icon" src="img/ibiscus.png" alt="ibiscus">
+            <img class="icon" src="./img/ibiscus.png" alt="ibiscus">
             <hr class="light">
             <p>+39 349 0834382</p>
             <p>kreostudios@tiscali.it</p>
@@ -178,5 +208,7 @@ Patrizia Marras</p>
         </div>
       </div>
     </footer>
+    <script type="text/javascript">
+    </script>
   </body>
 </html>
