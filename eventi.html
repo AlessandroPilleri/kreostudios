@@ -7,6 +7,107 @@
     <!-- external CSS -->
 
     <link rel="stylesheet" href="style.css">
+    <style>
+      .fit-image {
+        height: 100%;
+        width: 100%;
+      }
+      hr {
+        border-top: 2px solid #b4b4b4;
+        width: 95%;
+        margin-top: .3rem;
+        margin-bottom: 1rem;
+      }
+      #my-grid {
+        margin-top: 50px;
+      }
+      .grid-padding {
+        padding: 0 8px;
+      }
+      .grid-padding img {
+        margin-bottom: 15px;
+        transition: 0.8s ease;
+      }
+      .grid-padding img:hover {
+        box-shadow: 0 10px 40px 0 rgba(0,0,0,0.5);
+        transition: 0.8s ease;
+      }
+      .col-sm-4 {
+        padding-right: 30px;
+      }
+
+      /* Modal */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding: 5px 0;
+        Left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.8);
+      }
+      .modal-content {
+        position: relative;
+        margin: auto;
+        padding: 0;
+        width: 85%;
+        max-width: 1200px;
+        border: none;
+        background-color: transparent;
+      }
+      .my-slides {
+        text-align: center;
+      }
+      .portrait-image {
+        max-width: 60vh;
+      }
+      .landscape.image {
+        max-width: 80vh;
+      }
+      .close {
+        color: #FFF;
+        position: absolute;
+        top: 100px;
+        right: 25px;
+        font-size: 48px;
+        font-weight: bold;
+        transition: 0.3s ease;
+      }
+      .close:hover, .close:focus {
+        color: #FFF;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: #FFF !important;
+        font-weight: bold;
+        font-size: 3em;
+        transition: 0.6 ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .next:hover, .prev:hover {
+        background-color: rgba(0,0,0,0.8);
+      }
+      .numbertext {
+        color: grey;
+        font-size: 18px;
+      }
+    </style>
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -20,7 +121,244 @@
 
     <title>Kreo Studios - Eventi</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="./img/logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Galleria</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
+    <!-- Portfolio Section -->
+    <section class="section-padding" id="portfolio">
+      <div class="container">
+        <!-- Title Text -->
+        <div class="row">
+          <div class="col-sm-12">
+            <h1 class="title display-4 text-center">
+               Eventi
+            </h1>
+          </div>
+        </div>
+        <hr>
+
+        <!-- Thumbnails -->
+        <div class="container">
+          <div class="grid-padding">
+            <div id="my-grid" class="row">
+
+              <!-- First Column -->
+              <div id="grid1" class="col-sm-4">
+
+                <div class="row">
+                  <img src="img/eventi/1.jpg" class="fit-image" onclick="openModal();currentSlide(1)" alt="img">
+                </div>
+                <div class="row">
+                  <img src="img/eventi/2.jpg" class="fit-image" onclick="openModal();currentSlide(2)" alt="img">
+                </div>
+                <div class="row">
+                  <img src="img/eventi/3.jpg" class="fit-image" onclick="openModal();currentSlide(3)" alt="img">
+                </div>
+                <div class="row">
+                  <img src="img/eventi/4.jpg" class="fit-image" onclick="openModal();currentSlide(4)" alt="img">
+                </div>
+                <div class="row">
+                  <img src="img/eventi/5.jpg" class="fit-image" onclick="openModal();currentSlide(5)" alt="img">
+                </div>
+
+              </div>
+
+              <!-- Second Column -->
+              <div id="grid2" class="col-sm-4">
+
+                <div class="row">
+                  <img src="img/eventi/6.jpg" class="fit-image" onclick="openModal();currentSlide(6)" alt="img">
+                </div>
+                <div class="row">
+                  <img src="img/eventi/7.jpg" class="fit-image" onclick="openModal();currentSlide(7)" alt="img">
+                </div>
+                <div class="row">
+                  <img src="img/eventi/8.jpg" class="fit-image" onclick="openModal();currentSlide(8)" alt="img">
+                </div>
+                <div class="row">
+                  <img src="img/eventi/9.jpg" class="fit-image" onclick="openModal();currentSlide(9)" alt="img">
+                </div>
+                <div class="row">
+                  <img src="img/eventi/10.jpg" class="fit-image" onclick="openModal();currentSlide(10)" alt="img">
+                </div>
+
+              </div>
+
+              <!-- Third Column -->
+              <div id="grid3" class="col-sm-4">
+
+                <div class="row">
+                  <img src="img/eventi/11.JPG" class="fit-image" onclick="openModal();currentSlide(11)" alt="img">
+                </div>
+                <div class="row">
+                  <img src="img/eventi/12.jpg" class="fit-image" onclick="openModal();currentSlide(12)" alt="img">
+                </div>
+                <div class="row">
+                  <img src="img/eventi/13.jpg" class="fit-image" onclick="openModal();currentSlide(13)" alt="img">
+                </div>
+                <div class="row">
+                  <img src="img/eventi/14.jpg" class="fit-image" onclick="openModal();currentSlide(14)" alt="img">
+                </div>
+                <div class="row">
+                  <img src="img/eventi/15.jpg" class="fit-image" onclick="openModal();currentSlide(15)" alt="img">
+                </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Modal for Full Screen -->
+    <div id="my-modal" class="modal">
+
+      <!-- Close Button -->
+      <span class="close" onclick="closeModal()">&times;</span>
+
+      <!-- Content for Modal -->
+      <div id="modalContent" class="modal-content">
+
+        <!-- Images for Modal (Image Viewer) -->
+        <div class="my-slides">
+          <img src="img/eventi/1.jpg" alt="" class="landscape-image col-md-10">
+          <div class="numbertext text-center">1 / 15</div>
+        </div>
+
+        <div class="my-slides">
+          <img src="img/eventi/2.jpg" alt="" class="portrait-image col-md-10">
+          <div class="numbertext text-center">2 / 15</div>
+        </div>
+
+        <div class="my-slides">
+          <img src="img/eventi/3.jpg" alt="" class="landscape-image col-md-10">
+          <div class="numbertext text-center">3 / 15</div>
+        </div>
+
+        <div class="my-slides">
+          <img src="img/eventi/4.jpg" alt="" class="landscape-image col-md-10">
+          <div class="numbertext text-center">4 / 15</div>
+        </div>
+
+        <div class="my-slides">
+          <img src="img/eventi/5.jpg" alt="" class="landscape-image col-md-10">
+          <div class="numbertext text-center">5 / 15</div>
+        </div>
+
+        <div class="my-slides">
+          <img src="img/eventi/6.jpg" alt="" class="portrait-image col-md-10">
+          <div class="numbertext text-center">6 / 15</div>
+        </div>
+
+        <div class="my-slides">
+          <img src="img/eventi/7.jpg" alt="" class="landscape-image col-md-10">
+          <div class="numbertext text-center">7 / 15</div>
+        </div>
+
+        <div class="my-slides">
+          <img src="img/eventi/8.jpg" alt="" class="landscape-image col-md-10">
+          <div class="numbertext text-center">8 / 15</div>
+        </div>
+
+        <div class="my-slides">
+          <img src="img/eventi/9.jpg" alt="" class="portrait-image col-md-10">
+          <div class="numbertext text-center">9 / 15</div>
+        </div>
+
+        <div class="my-slides">
+          <img src="img/eventi/10.jpg" alt="" class="portrait-image col-md-10">
+          <div class="numbertext text-center">10 / 15</div>
+        </div>
+
+        <div class="my-slides">
+          <img src="img/eventi/11.jpg" alt="" class="portrait-image col-md-10">
+          <div class="numbertext text-center">11 / 15</div>
+        </div>
+
+        <div class="my-slides">
+          <img src="img/eventi/12.jpg" alt="" class="landscape-image col-md-10">
+          <div class="numbertext text-center">12 / 15</div>
+        </div>
+
+        <div class="my-slides">
+          <img src="img/eventi/13.jpg" alt="" class="landscape-image col-md-10">
+          <div class="numbertext text-center">13 / 15</div>
+        </div>
+
+        <div class="my-slides">
+          <img src="img/eventi/14.jpg" alt="" class="landscape-image col-md-10">
+          <div class="numbertext text-center">14 / 15</div>
+        </div>
+
+        <div class="my-slides">
+          <img src="img/eventi/15.jpg" alt="" class="portrait-image col-md-10">
+          <div class="numbertext text-center">15 / 15</div>
+        </div>
+
+        <!-- Next and Previous Buttons -->
+        <a href="#" class="prev" onclick="changeSlides(-1)">&#10094;</a>
+        <a href="#" class="next" onclick="changeSlides(1)">&#10095;</a>
+
+      </div>
+    </div>
+
+    <script type="text/javascript">
+
+      function openModal() {
+        document.getElementById("my-modal").style.display = "inline-flex";
+      }
+      function closeModal() {
+        document.getElementById("my-modal").style.display = "none";
+      }
+
+      var slideIndex = 1;
+
+      showSlides(slideIndex);
+
+      function changeSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName('my-slides');
+
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+      }
+    </script>
   </body>
 </html>
