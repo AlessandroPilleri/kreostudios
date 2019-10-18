@@ -70,6 +70,7 @@
           <div class="carousel-caption">
             <h1 class="display-3">Kreo Studio's</h1>
             <h3>Visual merchandising</h3>
+              <a class="anchor" href="#azienda">Scopri di più</a>
           </div>
         </div>
         <div class="carousel-item">
@@ -89,14 +90,16 @@
       </div>
     </div>
 
+
+
     <!-- Welcome Section -->
     <div class="container-fluid padding">
       <div class="row welcome text-center">
-        <div id="azienda" class="col-12">
+        <div id="azienda" class="col-12 welcometitle">
           <h1 class="display-4">Azienda</h1>
         </div>
-        <hr>
-        <div class="col-12">
+        <hr class="welcomedivider">
+        <div class="col-12 welcomesubtitle">
           <p class="lead">Cosa offre Kreo Studio's</p>
         </div>
       </div>
@@ -105,35 +108,35 @@
     <!-- Five Column Section -->
     <div class="container-fluid padding">
       <div class="row text-center padding">
-        <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="col-xs-12 col-sm-6 col-md-4 scroll">
           <a href="./visualmerchandising.html">
             <img class="zoom" src="./img/visualmerchandising.png" alt="" >
           </a>
           <h3>Visual merchandising</h3>
           <p>allestimento interno Corner per ottimizzare la vendita (outfit/colore)</p>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="col-xs-12 col-sm-6 col-md-4 scroll">
           <a href="./allestimentovetrine.html">
             <img class="zoom" src="./img/vetrina.png" alt="" >
           </a>
           <h3>Allestimento vetrine</h3>
           <p>tematica stagionale/promozionale ed eventi</p>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="col-xs-12 col-sm-6 col-md-4 scroll">
           <a href="./eventi.html">
             <img class="zoom" src="./img/eventi.png" alt="" >
           </a>
           <h3>Eventi</h3>
           <p>aziendali, promozionali e privati (cerimonie, addobbi natalizi, ...)</p>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="col-xs-12 col-sm-6 col-md-6 scroll">
           <a href="./grafica.html">
             <img class="zoom" src="./img/grafica.png" alt="" >
           </a>
           <h3>Grafica</h3>
           <p>pubblicitaria, sfondi fotografici ad alta risoluzione, stampe personalizzate su ogni tipo di materiale (forex, carta da manifesto, pvc, tela, cartone)</p>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-6">
+        <div class="col-xs-12 col-sm-12 col-md-6 scroll">
           <a href="./restylinginterni.html">
             <img class="zoom" src="./img/restyling.png" alt="" >
           </a>
@@ -147,10 +150,10 @@
     <!-- Cards -->
     <div class="container-fluid padding">
       <div class="row welcome text-center">
-        <div id="customer" class="col-12">
+        <div id="customer" class="col-12 customertitle">
           <h1 class="display-4">Customers</h1>
         </div>
-        <hr>
+        <hr class="customerdivider">
         <div class="col-sm-12 col-md-6">
           <a href="./clienti.html">
             <img class="zoom" src="./img/clients.png" alt="" >
@@ -229,10 +232,61 @@ Patrizia Marras</p>
         </div>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js" charset="utf-8"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
     <script type="text/javascript">
+    /*var controller = new ScrollMagic.Controller();
+
+    new ScrollMagic.Scene({
+      triggerElement: '#azienda',
+      offset: -100,
+      reverse: false
+    })
+    .setTween('.welcometitle', 1, {
+      opacity: 1,
+      transform: "translateY(0)"
+    })
+    .setTween('.welcomedivider', 1, {
+      opacity: 1,
+      width: 95%
+    })
+    .addTo(controller);
+
+    new ScrollMagic.Scene({
+      triggerElement: '#azienda',
+      offset: -50,
+      reverse: false
+    })
+    .setTween('.scroll', 1, {opacity: 1, transform: "translateY(0)"})
+    .addTo(controller);*/
+
     var controller = new ScrollMagic.Controller();
+    var timelineWelcome = new TimelineMax();
+
+    timelineWelcome.staggerTo('.welcometitle, .welcomesubtitle', .8, {
+        opacity: 1,
+        transform: "translateX(0)"
+      })
+    .staggerTo('.welcomedivider', 1, {
+        opacity: 1,
+        width: "95%"
+      }, 0, "-=0.5")
+    .staggerTo('.scroll', 1, {
+      opacity: 1,
+      transform: "translateY(0)"
+    }, -.1, "-=1.5");
+
+    new ScrollMagic.Scene({
+      triggerElement: '#azienda',
+      offset: -400,
+      reverse: false
+    })
+    .setTween(timelineWelcome)
+    .addTo(controller)
+
     </script>
   </body>
 </html>

@@ -10,7 +10,7 @@ html, body {
   padding-top: 12%;
 }
 .navbar {
-  padding: .8rem;
+  padding: .3rem;
 }
 .navbar-nav li {
   padding-right: 20px;
@@ -21,19 +21,21 @@ html, body {
 .nav-link {
   font-size: 1.1em !important;
 }
+.anchor {
+}
 #slides{
   border-bottom: 60px solid #ececec;
 }
 .carousel-inner {
-  max-height: 50rem;
-  min-height: 18rem;
+  max-height: 95vh;
+  min-height: 20vh;
 }
 .carousel-item img {
-  height: 200vh;
+  height: 130vh;
 }
 .carousel-caption {
   position: absolute;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
   animation-name: fadein;
   animation-duration: 1s;
@@ -50,11 +52,8 @@ html, body {
   text-shadow: 1px 1px 10px #000;
   padding-bottom: 1rem;
 }
-.jumbotron {
-  padding: 1rem;
-  border-radius: 0;
-}
 .padding {
+  z-index: 1;
   padding-bottom: 2rem;
 }
 .welcome {
@@ -62,11 +61,25 @@ html, body {
   margin: 0 auto;
   padding-top: 2rem;
 }
-.welcome hr {
+.welcometitle {
+  opacity: 0;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+}
+.welcomesubtitle {
+  opacity: 0;
+  transform: translateX(50%);
+}
+.welcomedivider {
+  opacity: 0;
+  width: 1px;
   border-top: 2px solid #b4b4b4;
-  width: 95%;
   margin-top: .3rem;
   margin-bottom: 1rem;
+}
+.scroll {
+  opacity: 0;
+  transform: translateY(50%);
 }
 .zoom {
   transition: transform .2s;
@@ -77,6 +90,15 @@ html, body {
   -ms-transform: scale(1.5);
   -webkit-transform: scale(1.5);
   transform: scale(1.5);
+}
+.customertitle {
+  font-size: 1.5rem;
+}
+.customerdivider {
+  border-top: 2px solid #b4b4b4;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+  width: 95%;
 }
 .card {
   margin: 0.5rem;
@@ -135,6 +157,28 @@ hr.lightfooter {
   to {
     transform: translateY(-50%);
     opacity: 1;
+  }
+}
+
+@keyframes init {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes init {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
