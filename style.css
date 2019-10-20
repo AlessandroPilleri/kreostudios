@@ -22,8 +22,6 @@ html, body {
 .nav-link {
   font-size: 1.1em !important;
 }
-.anchor {
-}
 #slides{
   border-bottom: 60px solid #ececec;
 }
@@ -52,6 +50,12 @@ html, body {
   font-weight: 500;
   text-shadow: 1px 1px 10px #000;
   padding-bottom: 1rem;
+}
+.carousel-caption a {
+  color: #d5d5d5;
+}
+.carousel-caption a:hover {
+  color: #fa4b4b;
 }
 .padding {
   z-index: 1;

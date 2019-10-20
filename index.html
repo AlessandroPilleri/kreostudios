@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"  data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" href="#slides">Home</a>
+              <a class="nav-link anchor" href="#slides">Home</a>
             </li>
             <li class="nav-item dropdown"  data-toggle="collapse" data-target=".navbar-collapse.show">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Azienda</a>
@@ -44,13 +44,13 @@
               </div>
             </li>
             <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" href="#customer">Customer</a>
+              <a class="nav-link anchor" href="#customer">Customer</a>
             </li>
             <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" href="#bio">Biografia</a>
+              <a class="nav-link anchor" href="#bio">Biografia</a>
             </li>
             <li class="nav-item"  data-toggle="collapse" data-target=".navbar-collapse.show">
-              <a class="nav-link" href="#contact">Contatta</a>
+              <a class="nav-link anchor" href="#contact">Contatta</a>
             </li>
           </ul>
         </div>
@@ -70,7 +70,7 @@
           <div class="carousel-caption">
             <h1 class="display-3">Kreo Studio's</h1>
             <h3>Visual merchandising</h3>
-              <a class="anchor" href="#azienda">Scopri di più</a>
+            <button type="button" class="btn btn-outline-light btn-lg"><a class="anchor" href="#azienda">Scopri di più</a></button>
           </div>
         </div>
         <div class="carousel-item">
@@ -89,8 +89,6 @@
         </div>
       </div>
     </div>
-
-
 
     <!-- Welcome Section -->
     <div class="container-fluid padding">
@@ -285,7 +283,22 @@ Patrizia Marras</p>
       reverse: false
     })
     .setTween(timelineWelcome)
-    .addTo(controller)
+    .addTo(controller);
+
+    $('.anchor').click(function (e) {
+
+      var linkHref = $(this).attr('href');
+      console.log($(linkHref).offset().top);
+
+      var headerHeight = $('.navbar').outerHeight();
+      console.log(headerHeight);
+
+      $('html, body').animate({
+        scrollTop: $(linkHref).offset().top - headerHeight - 20
+      }, 500);
+
+      e.preventDefault();
+    })
 
     </script>
   </body>
