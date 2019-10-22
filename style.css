@@ -51,8 +51,12 @@ html, body {
   text-shadow: 1px 1px 10px #000;
   padding-bottom: 1rem;
 }
+.btn {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 .carousel-caption a {
-  color: #d5d5d5;
+  color: #FFF;
+  text-shadow: 1px 1px 10px #000;
 }
 .carousel-caption a:hover {
   color: #fa4b4b;
@@ -98,20 +102,45 @@ html, body {
 }
 .customertitle {
   font-size: 1.5rem;
+  opacity: 0;
+  transform: translateY(-50%);
 }
 .customerdivider {
   border-top: 2px solid #b4b4b4;
   margin-top: .3rem;
   margin-bottom: 1rem;
-  width: 95%;
+  width: 1px;
+  opacity: 0;
+}
+.clienti {
+  opacity: 0;
+  transform: translateX(-50%);
+}
+.collab {
+  opacity: 0;
+  transform: translateX(50%);
 }
 .card {
   margin: 0.5rem;
 }
+.biotitle {
+  opacity: 0;
+  transform: translateX(50%);
+}
+.biodivider {
+  opacity: 0;
+  width: 1px;
+}
+.biobody {
+  transform: translateX(-10%);
+  opacity: 0;
+
+}
 .photo img {
+  transform: translateX(50%);
+  opacity: 0;
   max-height: 30rem;
   height: 100%;
-  padding-left: 3rem;
   position: relative;
 }
 .social img {
