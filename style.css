@@ -134,7 +134,7 @@ html, body {
 .biobody {
   transform: translateX(-10%);
   opacity: 0;
-
+  text-align: justify;
 }
 .photo img {
   transform: translateX(50%);

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <!-- Slick library -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <!-- external CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+    <!-- Meta data -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style media="screen">
+      .center {
+        width: 100%;
+        height: 100%;
+      }
+      .el {
+        background: white;
+        width: 50%;
+        left: 50%;
+      }
+    </style>
+    <title></title>
+  </head>
+  <body style="background: grey; overflow: hidden">
+
+    <div class="center">
+      <div class="el"><h3>1</h3></div>
+      <div class="el"><h3>2</h3></div>
+      <div class="el"><h3>3</h3></div>
+      <div class="el"><h3>4</h3></div>
+      <div class="el"><h3>5</h3></div>
+      <div class="el"><h3>6</h3></div>
+      <div class="el"><h3>7</h3></div>
+      <div class="el"><h3>8</h3></div>
+      <div class="el"><h3>9</h3></div>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+      $('.center').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 4,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 4
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    })
+    </script>
+  </body>
+</html>
