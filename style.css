@@ -153,19 +153,16 @@ html, body {
   height: 100%;
 }
 .clienti-carousel-caption {
+  padding-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
+  margin: 0 auto;
   height: 500px;
 }
 .carousel-control-prev, .carousel-control-next {
   color: #FFF;
-}
-.clienti {
-  opacity: 0;
-  transform: translateX(-50%);
-}
-.collab {
-  opacity: 0;
-  transform: translateX(50%);
 }
 .card {
   box-shadow: 1px 1px 10px #000;
@@ -182,6 +179,33 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.collabTitle {
+  padding-top: 10%;
+}
+.collabTitle h1, .collabTitle h2 {
+  font-size: 3rem;
+}
+.collab-carousel-inner {
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+.collab-carousel-item img {
+  width: 100%;
+  height: 30rem;
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+  opacity: 0.8;
+}
+.collab-carousel-caption {
+
+}
+.collab-carousel-caption h1 {
+  text-shadow: 1px 1px 10px #000;
+}
+.collab-carousel-caption h3 {
+  text-shadow: 1px 1px 10px #000;
 }
 .biotitle {
   opacity: 0;
