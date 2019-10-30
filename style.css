@@ -96,6 +96,7 @@ html, body {
   padding-right: 0px;
   opacity: 0;
   transform: translateY(50%);
+  align-items: center;
 }
 .zoom {
   transition: transform .2s;
@@ -106,6 +107,14 @@ html, body {
   -ms-transform: scale(1.5);
   -webkit-transform: scale(1.5);
   transform: scale(1.5);
+}
+.scroll h3 {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.scroll p {
+  padding-left: 15%;
+  padding-right: 15%;
 }
 .bcg-parallax {
   padding: 8% 0;
@@ -202,9 +211,11 @@ html, body {
 
 }
 .collab-carousel-caption h1 {
+  font-size: 3rem;
   text-shadow: 1px 1px 10px #000;
 }
 .collab-carousel-caption h3 {
+  font-size: 2rem;
   text-shadow: 1px 1px 10px #000;
 }
 .biotitle {
@@ -216,11 +227,15 @@ html, body {
   width: 1px;
 }
 .biobody {
+  padding-left: 5%;
+  padding-right: 5%;
   transform: translateX(-10%);
   opacity: 0;
   text-align: justify;
 }
 .photo img {
+  padding-left: 10%;
+  padding-right: 10%;
   transform: translateX(50%);
   opacity: 0;
   max-height: 30rem;
@@ -325,6 +340,12 @@ hr.lightfooter {
   .display-4 {
     font-size: 200%;
   }
+  .customertitle {
+    font-size: 1.3rem;
+  }
+  .collabTitle h1, .collabTitle h2 {
+    font-size: 2.8rem;
+  }
 }
 @media (max-width: 576px) {
   .title {
@@ -343,5 +364,20 @@ hr.lightfooter {
   }
   .card {
     transform: scale(0.5);
+  }
+  .customertitle {
+    font-size: 1rem;
+  }
+  .collabTitle h1, .collabTitle h2 {
+    font-size: 2rem;
+  }
+  .collab-carousel-item img {
+    height: 15rem;
+  }
+  .collab-carousel-caption h1 {
+    font-size: 1.5rem;
+  }
+  .collab-carousel-caption h3 {
+    font-size: 1.1rem;
   }
 }
